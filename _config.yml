@@ -1,0 +1,18 @@
+layout: default
+title: Rajiv Khanna
+encoding: utf-8
+image:
+  source: images
+  output: generated
+  presets:
+    # Proportional preset
+    users:
+      attr:
+        class: user-portrait
+        itemprop: image
+      width: 350
+    # Scaled and cropped preset
+    half:
+      width: 400
+      height: 400
+---

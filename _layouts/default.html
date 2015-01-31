@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+		</head>
+		<body>
+			<table>
+			<tr> 
+				<td> <img src='images/me.png' /> </td> 
+				<td> Email: [first name]ak@utexas.edu <br>
+					 <a href="https://scholar.google.com/citations?user=523w4w8AAAAJ&hl=en">Google Scholar</a> <br> 
+					 <a href="http://www.informatik.uni-trier.de/~ley/pers/ht/k/Khanna:Rajiv.html">DBLP</a>  
+				</td> 
+			</tr>
+			</table>		
+			<nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="#Pubs">Publications</a></li>
+		        	<li><a href="#Workex">Work Experience</a></li>
+	        		<li><a href="/cv.pdf">CV</a></li>
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			{{ content }}
+			
+			</div><!-- /.container -->
+			<footer>
+			</footer>
+		</body>
+	</html>
