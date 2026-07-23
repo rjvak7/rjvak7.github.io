@@ -8,12 +8,12 @@ const layoutUrl = new URL("../app/layout.tsx", import.meta.url);
 test("homepage carries the finished research positioning", async () => {
   const page = await readFile(pageUrl, "utf8");
 
-  assert.match(page, /what to keep/);
-  assert.match(page, /what to forget/);
-  assert.match(page, /when to defer/);
+  assert.match(page, /Current projects/);
+  assert.match(page, /Selected publications/);
+  assert.match(page, /News and updates/);
+  assert.match(page, /Machine learning theory for reliable and efficient systems/);
   assert.match(page, /NSF CAREER Award/);
-  assert.match(page, /Selected work/);
-  assert.match(page, /Build with us/);
+  assert.match(page, /Prospective students and postdoctoral researchers/);
 });
 
 test("starter preview metadata and components are gone", async () => {

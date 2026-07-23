@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 
-const title = "Rajiv Khanna — Machine Learning Theory, Made Legible";
+const title = "Rajiv Khanna | Machine Learning Research at Purdue";
 const description =
-  "Rajiv Khanna is an NSF CAREER awardee and Assistant Professor at Purdue working on machine learning theory, optimization, privacy, unlearning, data selection, and human-AI collaboration.";
+  "Rajiv Khanna is an Assistant Professor at Purdue University working on machine learning theory, optimization, stability, model memory, data-efficient learning, and human-AI systems.";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
@@ -30,9 +30,9 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [
         {
           url: "/og.png",
-          width: 1731,
-          height: 909,
-          alt: "Machine learning that knows what to keep, what to forget, and when to defer.",
+          width: 1734,
+          height: 907,
+          alt: "Rajiv Khanna — Machine Learning Theory — Purdue University",
         },
       ],
     },

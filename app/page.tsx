@@ -1,85 +1,120 @@
-const researchThreads = [
+const researchProjects = [
   {
     number: "01",
-    title: "Understand the geometry",
-    body: "I study how loss landscapes shape stability, memorization, generalization, and the surprising simplicity bias of modern optimizers.",
+    id: "learning-dynamics",
+    title: "Learning dynamics",
+    body: "We study how optimization and loss-surface geometry govern stability, generalization, memorization, and the implicit biases of modern learning algorithms.",
     tags: ["Optimization", "Stability", "Generalization"],
   },
   {
     number: "02",
-    title: "Make forgetting real",
-    body: "Privacy is not just an output-layer problem. My group develops methods to find, measure, and remove what models have memorized.",
-    tags: ["Unlearning", "Privacy", "Memorization"],
+    id: "model-memory",
+    title: "Model memory",
+    body: "We develop ways to characterize what a model has memorized, understand the privacy consequences, and remove information through principled machine unlearning.",
+    tags: ["Memorization", "Privacy", "Unlearning"],
   },
   {
     number: "03",
-    title: "Distill the data",
-    body: "From coresets to sparsification and active inference, I build principled ways to do more with less data, labeling, and computation.",
-    tags: ["Coresets", "Data selection", "Efficiency"],
+    id: "data-efficient-learning",
+    title: "Data-efficient learning",
+    body: "We design algorithms for selecting, summarizing, and sparsifying data while preserving the statistical and geometric structure needed for learning.",
+    tags: ["Coresets", "Data selection", "Sparsification"],
   },
   {
     number: "04",
-    title: "Design with people",
-    body: "I investigate when AI should align with human judgment, when it should complement it, and when it should know enough to defer.",
+    id: "human-ai-systems",
+    title: "Human-AI systems",
+    body: "We investigate how learning systems should align with human judgment, complement it, and adapt when people and models have different strengths.",
     tags: ["Human-AI", "LLMs", "Collaboration"],
   },
 ];
 
-const selectedWork = [
+const selectedPublications = [
   {
     year: "2026",
     venue: "ICLR",
     title: "Sharpness-Aware Machine Unlearning",
-    note: "Moves machine forgetting beyond logits and into learned representations.",
-    tone: "acid",
+    note: "Studies machine unlearning beyond output behavior, including how information persists in learned representations.",
+    tags: ["Unlearning", "Memorization", "Optimization"],
   },
   {
     year: "2026",
     venue: "ACL Findings",
     title:
       "From Fallback to Frontline: When Can LLMs be Superior Annotators of Human Perspectives?",
-    note: "Asks when language models can responsibly improve on human annotation.",
-    tone: "coral",
+    note: "Examines when language models can augment or improve human annotation for subjective tasks.",
+    tags: ["Human-AI", "LLMs", "Collaboration"],
   },
   {
     year: "2025",
     venue: "NeurIPS",
     title:
       "Stable Coresets via Posterior Sampling: Aligning Induced and Full Loss Landscapes",
-    note: "Builds compact datasets that preserve the geometry of the full problem.",
-    tone: "blue",
+    note: "Constructs compact datasets that preserve important aspects of the full problem’s loss landscape.",
+    tags: ["Coresets", "Data selection", "Optimization"],
   },
   {
     year: "2025",
     venue: "NeurIPS",
     title:
       "A Unified Stability Analysis of SAM vs SGD: Role of Data Coherence and Emergence of Simplicity Bias",
-    note: "Connects optimization, data coherence, and the solutions models prefer.",
-    tone: "violet",
+    note: "Connects optimization dynamics, data coherence, stability, and the solutions selected by learning algorithms.",
+    tags: ["Stability", "Generalization", "Optimization"],
   },
   {
     year: "2024",
     venue: "KDD",
     title:
       "Approximating Memorization Using Loss Surface Geometry for Dataset Pruning and Summarization",
-    note: "Turns a model’s geometry into a practical signal for selecting data.",
-    tone: "pink",
+    note: "Uses loss-surface geometry as a practical signal for identifying influential and redundant data.",
+    tags: ["Memorization", "Data selection", "Stability"],
   },
   {
     year: "2020",
     venue: "NeurIPS · Best Paper",
     title:
       "Improved Guarantees and a Multiple-Descent Curve for Column Subset Selection and the Nyström Method",
-    note: "One of three best papers selected from more than 9,400 submissions.",
-    tone: "gold",
+    note: "Develops new guarantees for fundamental data approximation problems; selected as one of three best papers.",
+    tags: ["Data selection", "Sparsification", "Optimization"],
+  },
+];
+
+const newsItems = [
+  {
+    date: "June 2026",
+    category: "Award",
+    title: "NSF CAREER Award",
+    body: "Purdue recognized Rajiv among its 2026 recipients of the National Science Foundation’s Faculty Early Career Development Program award.",
+    href: "https://research.purdue.edu/about/research-updates/academic-and-research-excellence-updates/are-2026-06-29/",
+  },
+  {
+    date: "2026",
+    category: "Publications",
+    title: "Six papers across ICLR, ICML, ACL, COLT, and AAAI",
+    body: "Recent work spans machine unlearning, privacy, diffusion language models, human-centered annotation, collaboration, and spectral methods.",
+    href: "https://rjvak7.github.io/pubs.html",
+  },
+  {
+    date: "Fall 2026",
+    category: "Opportunities",
+    title: "Postdoctoral and PhD positions",
+    body: "The group is welcoming conversations with IPAI postdoctoral applicants and prospective Purdue Computer Science PhD students.",
+    href: "https://ipai.research.purdue.edu/postdoctoral-fellows-program/",
+  },
+  {
+    date: "2025",
+    category: "Publications",
+    title: "Three papers at NeurIPS",
+    body: "New results on spectral sparsification, optimizer stability, and stable coreset construction.",
+    href: "https://rjvak7.github.io/pubs.html",
   },
 ];
 
 const trajectory = [
   {
-    date: "2022 — now",
+    date: "2022 — present",
     place: "Purdue University",
-    role: "Assistant Professor · Computer Science",
+    role: "Assistant Professor, Department of Computer Science",
   },
   {
     date: "2021",
@@ -88,21 +123,37 @@ const trajectory = [
   },
   {
     date: "2019 — 2021",
-    place: "UC Berkeley",
-    role: "Postdoctoral Scholar · Foundations of Data Analysis Institute",
+    place: "University of California, Berkeley",
+    role: "Postdoctoral Scholar, Foundations of Data Analysis Institute",
   },
   {
     date: "2018",
-    place: "Simons Institute",
-    role: "Research Fellow · Foundations of Data Science",
+    place: "Simons Institute for the Theory of Computing",
+    role: "Research Fellow, Foundations of Data Science",
   },
 ];
 
-function Arrow() {
+function ExternalMark() {
   return (
-    <span aria-hidden="true" className="arrow">
+    <span aria-hidden="true" className="external-mark">
       ↗
     </span>
+  );
+}
+
+function Tags({
+  tags,
+  inverse = false,
+}: {
+  tags: string[];
+  inverse?: boolean;
+}) {
+  return (
+    <ul className={`tag-list${inverse ? " tag-list-inverse" : ""}`}>
+      {tags.map((tag) => (
+        <li key={tag}>{tag}</li>
+      ))}
+    </ul>
   );
 }
 
@@ -114,294 +165,280 @@ export default function Home() {
       </a>
 
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Rajiv Khanna, home">
-          <span>RK</span>
-          <span className="wordmark-text">Rajiv Khanna</span>
-        </a>
-        <nav aria-label="Primary navigation">
-          <a href="#research">Research</a>
-          <a href="#work">Selected work</a>
-          <a href="#path">Path</a>
-        </nav>
-        <a className="header-contact" href="mailto:rajivak@purdue.edu">
-          Let&apos;s talk <Arrow />
-        </a>
+        <div className="header-inner">
+          <a className="wordmark" href="#top" aria-label="Rajiv Khanna, home">
+            Rajiv Khanna
+            <span>Machine Learning Research</span>
+          </a>
+          <nav aria-label="Primary navigation">
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#news">News</a>
+            <a href="#biography">Biography</a>
+          </nav>
+          <a className="header-contact" href="mailto:rajivak@purdue.edu">
+            Contact
+          </a>
+        </div>
       </header>
 
       <main id="main">
-        <section className="hero" id="top" aria-labelledby="hero-title">
+        <section className="hero section-container" id="top">
           <div className="hero-copy">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" aria-hidden="true" />
-              NSF CAREER awardee · Purdue Computer Science
-            </div>
-            <h1 id="hero-title">
-              Machine learning that knows{" "}
-              <span className="underline acid-line">what to keep,</span>{" "}
-              <span className="underline coral-line">what to forget,</span> and{" "}
-              <span className="underline blue-line">when to defer.</span>
-            </h1>
-            <div className="hero-bottom">
-              <p>
-                I build theoretical foundations for machine learning systems
-                that behave predictably in the messy real world—from the
-                geometry of optimization and data selection to privacy,
-                unlearning, and human-AI collaboration.
-              </p>
-              <div className="hero-actions">
-                <a className="button button-dark" href="#research">
-                  Explore the research <span aria-hidden="true">↓</span>
-                </a>
-                <a
-                  className="text-link"
-                  href="https://scholar.google.com/citations?user=523w4w8AAAAJ&hl=en"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Google Scholar <Arrow />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="hero-portrait">
-            <div className="contour contour-one" aria-hidden="true" />
-            <div className="contour contour-two" aria-hidden="true" />
-            <div className="portrait-frame">
-              <img
-                src="/rajiv-khanna.jpg"
-                alt="Rajiv Khanna smiling against a light background"
-                width="800"
-                height="450"
-              />
-            </div>
-            <div className="portrait-stamp" aria-label="Theory meets practice">
-              <span>Theory</span>
-              <span aria-hidden="true">×</span>
-              <span>Practice</span>
-            </div>
-            <p className="portrait-caption">
-              Rajiv Khanna
-              <span>Assistant Professor · Purdue CS</span>
+            <p className="overline">
+              Assistant Professor of Computer Science · Purdue University
             </p>
-          </div>
-        </section>
-
-        <aside className="proof-strip" aria-label="Selected highlights">
-          <div className="proof-label">Signal, not noise</div>
-          <div className="proof-item">
-            <strong>2026</strong>
-            <span>NSF CAREER</span>
-          </div>
-          <div className="proof-item">
-            <strong>16</strong>
-            <span>publications · 2024–26</span>
-          </div>
-          <div className="proof-item">
-            <strong>1 of 3</strong>
-            <span>NeurIPS 2020 best papers</span>
-          </div>
-          <div className="proof-venues">
-            ICLR · ICML · NeurIPS · COLT · ACL
-          </div>
-        </aside>
-
-        <section className="research section-shell" id="research">
-          <div className="section-kicker">Research program</div>
-          <div className="research-intro">
-            <h2>
-              Powerful models are easy to admire.
-              <br />
-              <em>Understanding their behavior is the work.</em>
-            </h2>
-            <p>
-              My group works across machine learning theory, optimization, and
-              human-centered AI. The common thread is a practical one: build
-              systems whose behavior we can explain, shape, and trust.
+            <h1>Machine learning theory for reliable and efficient systems.</h1>
+            <p className="hero-summary">
+              I work on the foundations of machine learning, with particular
+              interests in optimization, stability, model memory, data
+              selection, and human-AI collaboration.
             </p>
-          </div>
-
-          <div className="research-grid">
-            {researchThreads.map((thread) => (
-              <article className="research-card" key={thread.number}>
-                <div className="card-number">{thread.number}</div>
-                <h3>{thread.title}</h3>
-                <p>{thread.body}</p>
-                <ul aria-label={`${thread.title} topics`}>
-                  {thread.tags.map((tag) => (
-                    <li key={tag}>{tag}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="work section-shell" id="work">
-          <div className="work-heading">
-            <div>
-              <div className="section-kicker">Selected work</div>
-              <h2>Recent ideas, in the wild.</h2>
-            </div>
-            <div className="work-links">
+            <div className="hero-links" aria-label="Profile links">
               <a
-                href="https://rjvak7.github.io/pubs.html"
+                href="https://scholar.google.com/citations?user=523w4w8AAAAJ&hl=en"
                 target="_blank"
                 rel="noreferrer"
               >
-                All publications <Arrow />
+                Google Scholar <ExternalMark />
               </a>
               <a
                 href="https://dblp.org/pid/31/4624.html"
                 target="_blank"
                 rel="noreferrer"
               >
-                DBLP <Arrow />
+                DBLP <ExternalMark />
+              </a>
+              <a
+                href="https://rjvak7.github.io/pubs.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Full publication list <ExternalMark />
               </a>
             </div>
           </div>
 
-          <div className="publication-list">
-            {selectedWork.map((paper) => (
-              <article className="publication" key={paper.title}>
-                <div className="publication-meta">
-                  <span className={`venue venue-${paper.tone}`}>
-                    {paper.venue}
-                  </span>
-                  <span>{paper.year}</span>
+          <figure className="hero-portrait">
+            <img
+              src="/rajiv-khanna.jpg"
+              alt="Rajiv Khanna smiling against a light background"
+              width="800"
+              height="450"
+            />
+            <figcaption>
+              <span>Rajiv Khanna</span>
+              <span>Purdue Computer Science</span>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section
+          className="research section-block section-container"
+          id="research"
+          aria-labelledby="research-title"
+        >
+          <div className="section-heading">
+            <div>
+              <p className="section-label">Ongoing research</p>
+              <h2 id="research-title">Current projects</h2>
+            </div>
+            <p>
+              The group studies fundamental questions about how learning
+              algorithms use data, what they retain, and how they interact with
+              people. These four directions organize our current work.
+            </p>
+          </div>
+
+          <div className="research-grid">
+            {researchProjects.map((project) => (
+              <article
+                className="research-card"
+                id={project.id}
+                key={project.number}
+              >
+                <div className="project-number">{project.number}</div>
+                <div className="project-content">
+                  <h3>{project.title}</h3>
+                  <p>{project.body}</p>
+                  <Tags tags={project.tags} />
                 </div>
-                <h3>{paper.title}</h3>
-                <p>{paper.note}</p>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="award-callout" aria-labelledby="award-title">
-          <div className="award-mark" aria-hidden="true">
-            26
-          </div>
-          <div className="award-copy">
-            <div className="section-kicker">Current signal</div>
-            <h2 id="award-title">NSF CAREER Award · 2026</h2>
-            <p>
-              Recognized by the National Science Foundation for a program of
-              ambitious research and education at the intersection of machine
-              learning theory and real-world behavior.
-            </p>
-          </div>
-          <a
-            className="button button-light"
-            href="https://research.purdue.edu/about/research-updates/academic-and-research-excellence-updates/are-2026-06-29/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Purdue announcement <Arrow />
-          </a>
-        </section>
-
-        <section className="path section-shell" id="path">
-          <div className="path-intro">
-            <div className="section-kicker">The path here</div>
-            <h2>
-              Theory that has
-              <br />
-              survived contact
-              <br />
-              <span>with practice.</span>
-            </h2>
-            <p>
-              Before academia, I built web-scale prediction and recommendation
-              systems at Yahoo! Labs, then worked at LinkedIn, Microsoft
-              Research, ETH Zürich, and Google Research.
-            </p>
-          </div>
-
-          <div className="timeline">
-            {trajectory.map((item) => (
-              <div className="timeline-row" key={`${item.date}-${item.place}`}>
-                <div className="timeline-date">{item.date}</div>
-                <div>
-                  <h3>{item.place}</h3>
-                  <p>{item.role}</p>
-                </div>
-              </div>
-            ))}
-            <div className="timeline-row timeline-education">
-              <div className="timeline-date">Education</div>
+        <section
+          className="publications section-block"
+          id="publications"
+          aria-labelledby="publications-title"
+        >
+          <div className="section-container">
+            <div className="section-heading publications-heading">
               <div>
-                <h3>UT Austin · IIT Bombay</h3>
-                <p>PhD, ECE · MTech, Computer Science</p>
+                <p className="section-label">Selected publications</p>
+                <h2 id="publications-title">Recent and representative work</h2>
               </div>
+              <div className="section-links">
+                <a
+                  href="https://rjvak7.github.io/pubs.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  All publications <ExternalMark />
+                </a>
+                <a
+                  href="https://dblp.org/pid/31/4624.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  DBLP <ExternalMark />
+                </a>
+              </div>
+            </div>
+
+            <div className="publication-list">
+              {selectedPublications.map((paper) => (
+                <article className="publication" key={paper.title}>
+                  <div className="publication-meta">
+                    <span className="venue">{paper.venue}</span>
+                    <span>{paper.year}</span>
+                  </div>
+                  <div className="publication-title">
+                    <h3>{paper.title}</h3>
+                    <Tags tags={paper.tags} inverse />
+                  </div>
+                  <p>{paper.note}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
-        <section className="join" id="join" aria-labelledby="join-title">
-          <div className="join-top">
-            <div className="section-kicker">Build with us</div>
-            <span className="join-status">
-              <span aria-hidden="true" /> Recruiting
-            </span>
+        <section
+          className="news section-block section-container"
+          id="news"
+          aria-labelledby="news-title"
+        >
+          <div className="news-intro">
+            <p className="section-label">News and updates</p>
+            <h2 id="news-title">From the group</h2>
+            <p>
+              A running record of publications, talks, travel, awards, and
+              group milestones.
+            </p>
           </div>
-          <h2 id="join-title">
-            Bring a hard question.
-            <br />
-            <span>Leave with a sharper one.</span>
-          </h2>
-          <div className="join-bottom">
-            <div className="join-copy">
+
+          <div className="news-list">
+            {newsItems.map((item) => (
+              <article className="news-item" key={`${item.date}-${item.title}`}>
+                <div className="news-meta">
+                  <time>{item.date}</time>
+                  <span>{item.category}</span>
+                </div>
+                <div>
+                  <h3>
+                    <a href={item.href} target="_blank" rel="noreferrer">
+                      {item.title} <ExternalMark />
+                    </a>
+                  </h3>
+                  <p>{item.body}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section
+          className="biography section-block"
+          id="biography"
+          aria-labelledby="biography-title"
+        >
+          <div className="section-container biography-grid">
+            <div className="biography-copy">
+              <p className="section-label">Biography</p>
+              <h2 id="biography-title">Theory informed by practice</h2>
               <p>
-                I have multiple PhD positions available and am welcoming
-                conversations with Fall 2026 IPAI postdoctoral applicants. If
-                you are drawn to theory that survives contact with practice,
-                tell me what you want to understand.
+                Before joining Purdue, I was a visiting researcher at Google
+                Research and a postdoctoral scholar at UC Berkeley. Earlier in
+                my career, I worked on large-scale prediction and recommendation
+                systems at Yahoo! Labs, with additional research experience at
+                LinkedIn, Microsoft Research, and ETH Zürich.
               </p>
-              <p className="join-note">
+              <p>
+                I received my PhD in Electrical and Computer Engineering from
+                the University of Texas at Austin and my MTech in Computer
+                Science from IIT Bombay.
+              </p>
+            </div>
+
+            <div className="timeline">
+              {trajectory.map((item) => (
+                <div className="timeline-row" key={`${item.date}-${item.place}`}>
+                  <div className="timeline-date">{item.date}</div>
+                  <div>
+                    <h3>{item.place}</h3>
+                    <p>{item.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="opportunities" aria-labelledby="opportunities-title">
+          <div className="section-container opportunities-grid">
+            <div>
+              <p className="section-label">Opportunities</p>
+              <h2 id="opportunities-title">
+                Prospective students and postdoctoral researchers
+              </h2>
+            </div>
+            <div>
+              <p>
+                I have multiple PhD positions available and welcome
+                conversations with Fall 2026 IPAI postdoctoral applicants.
                 Prospective PhD students should apply to Purdue Computer Science
                 and mention my name in their application.
               </p>
+              <a className="contact-link" href="mailto:rajivak@purdue.edu">
+                rajivak@purdue.edu <ExternalMark />
+              </a>
             </div>
-            <a className="email-link" href="mailto:rajivak@purdue.edu">
-              rajivak@purdue.edu <Arrow />
-            </a>
           </div>
         </section>
       </main>
 
       <footer>
-        <div>
-          <span className="footer-name">Rajiv Khanna</span>
-          <span>Assistant Professor · Purdue Computer Science</span>
-        </div>
-        <div className="footer-links">
-          <a
-            href="https://scholar.google.com/citations?user=523w4w8AAAAJ&hl=en"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Scholar
-          </a>
-          <a
-            href="https://dblp.org/pid/31/4624.html"
-            target="_blank"
-            rel="noreferrer"
-          >
-            DBLP
-          </a>
-          <a
-            href="https://www.cs.purdue.edu/people/faculty/rajivak.html"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Purdue
-          </a>
-          <a href="#top">Back to top ↑</a>
-        </div>
-        <div className="footer-note">
-          Learning is geometry.
-          <br />
-          Make the shape legible.
+        <div className="section-container footer-inner">
+          <div>
+            <span className="footer-name">Rajiv Khanna</span>
+            <span>Assistant Professor · Purdue Computer Science</span>
+          </div>
+          <div className="footer-links">
+            <a
+              href="https://scholar.google.com/citations?user=523w4w8AAAAJ&hl=en"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Scholar
+            </a>
+            <a
+              href="https://dblp.org/pid/31/4624.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              DBLP
+            </a>
+            <a
+              href="https://www.cs.purdue.edu/people/faculty/rajivak.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Purdue
+            </a>
+            <a href="#top">Back to top</a>
+          </div>
         </div>
       </footer>
     </>
