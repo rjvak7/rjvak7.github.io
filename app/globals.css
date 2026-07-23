@@ -324,28 +324,6 @@ a:hover .external-mark {
   line-height: 1.6;
 }
 
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: auto 0 0;
-  padding: 34px 0 0;
-  list-style: none;
-}
-
-.tag-list li {
-  padding: 4px 8px;
-  border: 1px solid #b8c6d1;
-  border-radius: 2px;
-  background: var(--blue-soft);
-  color: var(--blue);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  line-height: 1.3;
-  text-transform: uppercase;
-}
-
 .publications {
   background: var(--navy);
   color: #f4f6f7;
@@ -415,17 +393,6 @@ a:hover .external-mark {
   font-weight: 500;
   letter-spacing: -0.018em;
   line-height: 1.3;
-}
-
-.tag-list-inverse {
-  margin: 20px 0 0;
-  padding: 0;
-}
-
-.tag-list-inverse li {
-  border-color: #637787;
-  background: transparent;
-  color: #b9cad6;
 }
 
 .publication > p {

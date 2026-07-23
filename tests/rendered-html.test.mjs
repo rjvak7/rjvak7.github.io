@@ -14,6 +14,7 @@ test("homepage carries the finished research positioning", async () => {
   assert.match(page, /Machine learning theory for reliable and efficient systems/);
   assert.match(page, /NSF CAREER Award/);
   assert.match(page, /Prospective students and postdoctoral researchers/);
+  assert.doesNotMatch(page, /tag-list|<Tags|tags:/);
 });
 
 test("starter preview metadata and components are gone", async () => {

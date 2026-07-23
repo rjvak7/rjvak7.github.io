@@ -4,28 +4,24 @@ const researchProjects = [
     id: "learning-dynamics",
     title: "Learning dynamics",
     body: "We study how optimization and loss-surface geometry govern stability, generalization, memorization, and the implicit biases of modern learning algorithms.",
-    tags: ["Optimization", "Stability", "Generalization"],
   },
   {
     number: "02",
     id: "model-memory",
     title: "Model memory",
     body: "We develop ways to characterize what a model has memorized, understand the privacy consequences, and remove information through principled machine unlearning.",
-    tags: ["Memorization", "Privacy", "Unlearning"],
   },
   {
     number: "03",
     id: "data-efficient-learning",
     title: "Data-efficient learning",
     body: "We design algorithms for selecting, summarizing, and sparsifying data while preserving the statistical and geometric structure needed for learning.",
-    tags: ["Coresets", "Data selection", "Sparsification"],
   },
   {
     number: "04",
     id: "human-ai-systems",
     title: "Human-AI systems",
     body: "We investigate how learning systems should align with human judgment, complement it, and adapt when people and models have different strengths.",
-    tags: ["Human-AI", "LLMs", "Collaboration"],
   },
 ];
 
@@ -35,7 +31,6 @@ const selectedPublications = [
     venue: "ICLR",
     title: "Sharpness-Aware Machine Unlearning",
     note: "Studies machine unlearning beyond output behavior, including how information persists in learned representations.",
-    tags: ["Unlearning", "Memorization", "Optimization"],
   },
   {
     year: "2026",
@@ -43,7 +38,6 @@ const selectedPublications = [
     title:
       "From Fallback to Frontline: When Can LLMs be Superior Annotators of Human Perspectives?",
     note: "Examines when language models can augment or improve human annotation for subjective tasks.",
-    tags: ["Human-AI", "LLMs", "Collaboration"],
   },
   {
     year: "2025",
@@ -51,7 +45,6 @@ const selectedPublications = [
     title:
       "Stable Coresets via Posterior Sampling: Aligning Induced and Full Loss Landscapes",
     note: "Constructs compact datasets that preserve important aspects of the full problem’s loss landscape.",
-    tags: ["Coresets", "Data selection", "Optimization"],
   },
   {
     year: "2025",
@@ -59,7 +52,6 @@ const selectedPublications = [
     title:
       "A Unified Stability Analysis of SAM vs SGD: Role of Data Coherence and Emergence of Simplicity Bias",
     note: "Connects optimization dynamics, data coherence, stability, and the solutions selected by learning algorithms.",
-    tags: ["Stability", "Generalization", "Optimization"],
   },
   {
     year: "2024",
@@ -67,7 +59,6 @@ const selectedPublications = [
     title:
       "Approximating Memorization Using Loss Surface Geometry for Dataset Pruning and Summarization",
     note: "Uses loss-surface geometry as a practical signal for identifying influential and redundant data.",
-    tags: ["Memorization", "Data selection", "Stability"],
   },
   {
     year: "2020",
@@ -75,7 +66,6 @@ const selectedPublications = [
     title:
       "Improved Guarantees and a Multiple-Descent Curve for Column Subset Selection and the Nyström Method",
     note: "Develops new guarantees for fundamental data approximation problems; selected as one of three best papers.",
-    tags: ["Data selection", "Sparsification", "Optimization"],
   },
 ];
 
@@ -138,22 +128,6 @@ function ExternalMark() {
     <span aria-hidden="true" className="external-mark">
       ↗
     </span>
-  );
-}
-
-function Tags({
-  tags,
-  inverse = false,
-}: {
-  tags: string[];
-  inverse?: boolean;
-}) {
-  return (
-    <ul className={`tag-list${inverse ? " tag-list-inverse" : ""}`}>
-      {tags.map((tag) => (
-        <li key={tag}>{tag}</li>
-      ))}
-    </ul>
   );
 }
 
@@ -261,7 +235,6 @@ export default function Home() {
                 <div className="project-content">
                   <h3>{project.title}</h3>
                   <p>{project.body}</p>
-                  <Tags tags={project.tags} />
                 </div>
               </article>
             ))}
@@ -306,7 +279,6 @@ export default function Home() {
                   </div>
                   <div className="publication-title">
                     <h3>{paper.title}</h3>
-                    <Tags tags={paper.tags} inverse />
                   </div>
                   <p>{paper.note}</p>
                 </article>
