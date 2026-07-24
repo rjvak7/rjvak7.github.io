@@ -25,6 +25,13 @@ const groupMembers = [
     website:
       "https://scholar.google.com/citations?user=o-cU7CAAAAAJ&hl=en",
   },
+  {
+    name: "Haoran Tang",
+    role: "PhD Student",
+    interests: null,
+    image: "/group/haoran-tang.png",
+    website: "https://haorantang.github.io/",
+  },
 ];
 
 const graduatedStudents = [
