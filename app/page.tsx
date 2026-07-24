@@ -3,6 +3,19 @@ import SiteHeader from "./site-header";
 const researchProjects = [
   {
     number: "01",
+    id: "spectral-greedy-selection",
+    title: "Beyond worst-case greedy selection",
+    body: "We study why simple greedy algorithms can perform far better than worst-case theory predicts by identifying structure in the spectral landscape. For determinant maximization, stable-rank windows create broad success valleys, while sharp spectral drops produce unavoidable failure cliffs. This view connects matrix spectra to practical subset selection and gives stronger guarantees for random features, near-identity kernels, and spiked-plus-noise models.",
+    image: "/project-figures/spectral-valleys.svg",
+    imageAlt:
+      "Diagram of structured eigenvalue spectra, stable-rank success valleys, and a sharp failure cliff",
+    paper:
+      "Spectral Valleys and Sharp Failures in Greedy Determinant Maximization",
+    paperHref: "https://proceedings.mlr.press/v336/khanna26a.html",
+    captionPrefix: "COLT 2026",
+  },
+  {
+    number: "02",
     id: "learning-dynamics",
     title: "Learning dynamics",
     body: "We study how optimization algorithms behave near different classes of minima, and how data coherence, batch size, and perturbation scale determine which solutions remain stable. Our current work develops a unified view of SGD and sharpness-aware methods, connecting local loss geometry to generalization, low-complexity representations, and the emergence of simplicity bias.",
@@ -14,7 +27,7 @@ const researchProjects = [
     paperHref: "https://arxiv.org/abs/2511.17378",
   },
   {
-    number: "02",
+    number: "03",
     id: "model-memory",
     title: "Machine Unlearning",
     body: "We investigate what it means for a trained model to remember an individual example and how that information appears in representations, loss geometry, and membership-privacy risk. We use these signals to design principled machine-unlearning methods that remove designated data while preserving useful structure learned from the retain set.",
@@ -25,7 +38,7 @@ const researchProjects = [
     paperHref: "https://arxiv.org/abs/2506.13715",
   },
   {
-    number: "03",
+    number: "04",
     id: "data-efficient-learning",
     title: "Data-efficient learning",
     body: "We design coresets, pruning methods, and spectral sparsifiers that make learning possible with substantially less data or computation. Rather than preserving only first-order statistics, our methods aim to retain gradients, curvature, and the shape of the full-data loss landscape, producing compact summaries that remain reliable under noise and distributional complexity.",
@@ -37,7 +50,7 @@ const researchProjects = [
     paperHref: "https://arxiv.org/abs/2511.17399",
   },
   {
-    number: "04",
+    number: "05",
     id: "human-ai-systems",
     title: "Human-AI systems",
     body: "We study when AI systems should align with human judgment, when they should complement it, and how they can adapt between those roles. This includes learning from subjective annotations, estimating collective perspectives, and building human-centered ensembles that route decisions according to the relative strengths of people and models.",
@@ -47,19 +60,6 @@ const researchProjects = [
     paper:
       "Align When They Want, Complement When They Need! Human-Centered Ensembles for Adaptive Human-AI Collaboration",
     paperHref: "https://arxiv.org/abs/2602.20104",
-  },
-  {
-    number: "05",
-    id: "spectral-greedy-selection",
-    title: "Beyond worst-case greedy selection",
-    body: "We study why simple greedy algorithms can perform far better than worst-case theory predicts by identifying structure in the spectral landscape. For determinant maximization, stable-rank windows create broad success valleys, while sharp spectral drops produce unavoidable failure cliffs. This view connects matrix spectra to practical subset selection and gives stronger guarantees for random features, near-identity kernels, and spiked-plus-noise models.",
-    image: "/project-figures/spectral-valleys.svg",
-    imageAlt:
-      "Diagram of structured eigenvalue spectra, stable-rank success valleys, and a sharp failure cliff",
-    paper:
-      "Spectral Valleys and Sharp Failures in Greedy Determinant Maximization",
-    paperHref: "https://proceedings.mlr.press/v336/khanna26a.html",
-    captionPrefix: "COLT 2026",
   },
 ];
 
