@@ -46,7 +46,9 @@ test("publications and students have dedicated pages", async () => {
   assert.match(publications, /Complete publication list/);
   assert.match(publications, /import \{ publications \} from "\.\/data"/);
   assert.match(group, /Students and collaborators/);
-  assert.match(group, /student-placeholder-1\.svg/);
+  assert.match(group, /Young In Kim/);
+  assert.match(group, /user=_-xgkHEAAAAJ/);
+  assert.match(group, /young-in-kim\.png/);
   assert.match(group, /Graduated students/);
   assert.match(group, /Hasan Amin Mehmood/);
   assert.match(group, /Microsoft Research/);

@@ -10,16 +10,19 @@ export const metadata: Metadata = {
 // public/group/ and change the corresponding image path below.
 const groupMembers = [
   {
-    name: "Student Name",
+    name: "Young In Kim",
     role: "PhD Student",
-    interests: "Machine learning theory · Optimization",
-    image: "/group/student-placeholder-1.svg",
+    interests: null,
+    image: "/group/young-in-kim.png",
+    website:
+      "https://scholar.google.com/citations?user=_-xgkHEAAAAJ&hl=en",
   },
   {
     name: "Student Name",
     role: "PhD Student",
     interests: "Data-efficient learning · Human-AI systems",
     image: "/group/student-placeholder-2.svg",
+    website: null,
   },
 ];
 
@@ -56,14 +59,30 @@ export default function GroupPage() {
               <article className="member-card" key={`${member.name}-${index}`}>
                 <img
                   src={member.image}
-                  alt=""
+                  alt={
+                    member.name === "Student Name"
+                      ? ""
+                      : `Portrait of ${member.name}`
+                  }
                   width="600"
                   height="600"
                 />
                 <div>
-                  <h2>{member.name}</h2>
+                  <h2>
+                    {member.website ? (
+                      <a
+                        href={member.website}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {member.name}
+                      </a>
+                    ) : (
+                      member.name
+                    )}
+                  </h2>
                   <p className="member-role">{member.role}</p>
-                  <p>{member.interests}</p>
+                  {member.interests && <p>{member.interests}</p>}
                 </div>
               </article>
             ))}
