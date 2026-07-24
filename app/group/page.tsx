@@ -26,7 +26,7 @@ const groupMembers = [
 const graduatedStudents = [
   {
     name: "Hasan Amin Mehmood",
-    role: "PhD, Summer 2025",
+    role: "PhD, Summer 2026",
     details: "Jointly advised with Ming Yin",
     placement: "First job: Microsoft Research",
     image: "/group/hasan-amin-mehmood.jpeg",
