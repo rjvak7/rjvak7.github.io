@@ -51,6 +51,9 @@ test("publications and students have dedicated pages", async () => {
   assert.match(group, /Hasan Amin Mehmood/);
   assert.match(group, /Microsoft Research/);
   assert.match(group, /https:\/\/shasanamin\.github\.io\//);
+  assert.match(group, /Gregory Dexter/);
+  assert.match(group, /Petros Drineas/);
+  assert.match(group, /Research Scientist at LinkedIn/);
   assert.match(teaching, /Courses at Purdue/);
   assert.match(teaching, /CS 57300/);
   assert.match(teaching, /Interpretability in Machine Learning/);

@@ -32,6 +32,14 @@ const graduatedStudents = [
     image: "/group/hasan-amin-mehmood.jpeg",
     website: "https://shasanamin.github.io/",
   },
+  {
+    name: "Gregory Dexter",
+    role: "PhD, May 2024",
+    details: "Jointly advised with Petros Drineas",
+    placement: "First job: Research Scientist at LinkedIn",
+    image: "/group/gregory-dexter.png",
+    website: null,
+  },
 ];
 
 export default function GroupPage() {
@@ -78,13 +86,17 @@ export default function GroupPage() {
                   />
                   <div>
                     <h3>
-                      <a
-                        href={student.website}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {student.name}
-                      </a>
+                      {student.website ? (
+                        <a
+                          href={student.website}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {student.name}
+                        </a>
+                      ) : (
+                        student.name
+                      )}
                     </h3>
                     <p className="member-role">{student.role}</p>
                     <p>{student.details}</p>
