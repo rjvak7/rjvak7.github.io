@@ -20,7 +20,10 @@ test("homepage carries the finished research positioning", async () => {
   ]);
 
   assert.match(page, /Recent projects/);
-  assert.match(page, /identify the structure underlying learning/);
+  assert.match(
+    page,
+    /research in Foundational Machine Learning seeks to identify the\s+structure underlying learning/,
+  );
   assert.match(page, /Machine Unlearning/);
   assert.match(page, /Beyond worst-case greedy selection/);
   assert.match(page, /Spectral Valleys and Sharp Failures/);
