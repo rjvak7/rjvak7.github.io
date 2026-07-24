@@ -37,8 +37,8 @@ test("publications and students have dedicated pages", async () => {
     readFile(teachingUrl, "utf8"),
   ]);
 
-  assert.match(publications, /Recent and representative work/);
-  assert.match(publications, /Sharpness-Aware Machine Unlearning/);
+  assert.match(publications, /Complete publication list/);
+  assert.match(publications, /import \{ publications \} from "\.\/data"/);
   assert.match(group, /Students and collaborators/);
   assert.match(group, /student-placeholder-1\.svg/);
   assert.match(teaching, /Courses at Purdue/);
