@@ -744,6 +744,22 @@ a:hover .external-mark {
   margin-top: 44px;
 }
 
+.group-subsection {
+  margin-top: clamp(54px, 6vw, 78px);
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.group-subsection h2 {
+  margin-top: 12px;
+}
+
+.alumni-grid {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 760px;
+  margin-top: 28px;
+}
+
 .member-card {
   display: grid;
   grid-template-columns: 150px 1fr;

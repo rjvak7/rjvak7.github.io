@@ -23,6 +23,16 @@ const groupMembers = [
   },
 ];
 
+const graduatedStudents = [
+  {
+    name: "Hasan Amin Mehmood",
+    role: "PhD, Summer 2025",
+    details: "Jointly advised with Ming Yin",
+    placement: "First job: Microsoft Research",
+    image: "/group/hasan-amin-mehmood.jpeg",
+  },
+];
+
 export default function GroupPage() {
   return (
     <>
@@ -49,6 +59,32 @@ export default function GroupPage() {
               </article>
             ))}
           </div>
+
+          <section
+            className="group-subsection"
+            aria-labelledby="graduated-students"
+          >
+            <p className="section-label">Alumni</p>
+            <h2 id="graduated-students">Graduated students</h2>
+            <div className="group-grid alumni-grid">
+              {graduatedStudents.map((student) => (
+                <article className="member-card" key={student.name}>
+                  <img
+                    src={student.image}
+                    alt={`Portrait of ${student.name}`}
+                    width="800"
+                    height="800"
+                  />
+                  <div>
+                    <h3>{student.name}</h3>
+                    <p className="member-role">{student.role}</p>
+                    <p>{student.details}</p>
+                    <p>{student.placement}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
 
