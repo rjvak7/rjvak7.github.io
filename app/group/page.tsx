@@ -32,6 +32,13 @@ const groupMembers = [
     image: "/group/haoran-tang.png",
     website: "https://haorantang.github.io/",
   },
+  {
+    name: "Pinaki Mohanty",
+    role: "PhD Student",
+    interests: null,
+    image: "/group/student-placeholder-1.svg",
+    website: "https://pinakirm.github.io/",
+  },
 ];
 
 const graduatedStudents = [
@@ -67,7 +74,11 @@ export default function GroupPage() {
               <article className="member-card" key={`${member.name}-${index}`}>
                 <img
                   src={member.image}
-                  alt={`Portrait of ${member.name}`}
+                  alt={
+                    member.image.includes("placeholder")
+                      ? ""
+                      : `Portrait of ${member.name}`
+                  }
                   width="600"
                   height="600"
                 />
