@@ -18,11 +18,12 @@ const groupMembers = [
       "https://scholar.google.com/citations?user=_-xgkHEAAAAJ&hl=en",
   },
   {
-    name: "Student Name",
+    name: "Wei-Kai Chang",
     role: "PhD Student",
-    interests: "Data-efficient learning · Human-AI systems",
-    image: "/group/student-placeholder-2.svg",
-    website: null,
+    interests: null,
+    image: "/group/wei-kai-chang.png",
+    website:
+      "https://scholar.google.com/citations?user=o-cU7CAAAAAJ&hl=en",
   },
 ];
 
@@ -59,11 +60,7 @@ export default function GroupPage() {
               <article className="member-card" key={`${member.name}-${index}`}>
                 <img
                   src={member.image}
-                  alt={
-                    member.name === "Student Name"
-                      ? ""
-                      : `Portrait of ${member.name}`
-                  }
+                  alt={`Portrait of ${member.name}`}
                   width="600"
                   height="600"
                 />

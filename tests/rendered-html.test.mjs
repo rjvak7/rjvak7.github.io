@@ -49,6 +49,9 @@ test("publications and students have dedicated pages", async () => {
   assert.match(group, /Young In Kim/);
   assert.match(group, /user=_-xgkHEAAAAJ/);
   assert.match(group, /young-in-kim\.png/);
+  assert.match(group, /Wei-Kai Chang/);
+  assert.match(group, /user=o-cU7CAAAAAJ/);
+  assert.match(group, /wei-kai-chang\.png/);
   assert.match(group, /Graduated students/);
   assert.match(group, /Hasan Amin Mehmood/);
   assert.match(group, /Microsoft Research/);
