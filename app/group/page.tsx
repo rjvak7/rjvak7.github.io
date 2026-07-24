@@ -30,6 +30,7 @@ const graduatedStudents = [
     details: "Jointly advised with Ming Yin",
     placement: "First job: Microsoft Research",
     image: "/group/hasan-amin-mehmood.jpeg",
+    website: "https://shasanamin.github.io/",
   },
 ];
 
@@ -76,7 +77,15 @@ export default function GroupPage() {
                     height="800"
                   />
                   <div>
-                    <h3>{student.name}</h3>
+                    <h3>
+                      <a
+                        href={student.website}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {student.name}
+                      </a>
+                    </h3>
                     <p className="member-role">{student.role}</p>
                     <p>{student.details}</p>
                     <p>{student.placement}</p>
