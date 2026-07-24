@@ -39,6 +39,14 @@ const groupMembers = [
     image: "/group/student-placeholder-1.svg",
     website: "https://pinakirm.github.io/",
   },
+  {
+    name: "Kaiwen He",
+    role: "PhD Student",
+    interests: "Jointly advised with Petros Drineas",
+    image: "/group/student-placeholder-2.svg",
+    website:
+      "https://scholar.google.com/citations?user=DrExG4gAAAAJ&hl=en",
+  },
 ];
 
 const graduatedStudents = [
