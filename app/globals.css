@@ -99,7 +99,7 @@ a:focus-visible {
   flex-direction: column;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 19px;
+  font-size: 25px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -140,8 +140,8 @@ a:focus-visible {
 
 .header-profiles a {
   display: grid;
-  width: 34px;
-  height: 34px;
+  width: 29px;
+  height: 29px;
   place-items: center;
   border: 1px solid rgba(49, 95, 134, 0.35);
   border-radius: 50%;
@@ -155,8 +155,8 @@ a:focus-visible {
 }
 
 .header-profiles svg {
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
