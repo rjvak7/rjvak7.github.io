@@ -22,6 +22,9 @@ test("homepage carries the finished research positioning", async () => {
   assert.match(page, /Recent projects/);
   assert.match(page, /identify the structure underlying learning/);
   assert.match(page, /Machine Unlearning/);
+  assert.match(page, /Beyond worst-case greedy selection/);
+  assert.match(page, /Spectral Valleys and Sharp Failures/);
+  assert.match(page, /proceedings\.mlr\.press\/v336\/khanna26a\.html/);
   assert.match(page, /learning-dynamics-loss-landscape\.png/);
   assert.match(header, /Google Scholar/);
   assert.match(header, /href="\/publications"/);

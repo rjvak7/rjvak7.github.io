@@ -48,6 +48,19 @@ const researchProjects = [
       "Align When They Want, Complement When They Need! Human-Centered Ensembles for Adaptive Human-AI Collaboration",
     paperHref: "https://arxiv.org/abs/2602.20104",
   },
+  {
+    number: "05",
+    id: "spectral-greedy-selection",
+    title: "Beyond worst-case greedy selection",
+    body: "We study why simple greedy algorithms can perform far better than worst-case theory predicts by identifying structure in the spectral landscape. For determinant maximization, stable-rank windows create broad success valleys, while sharp spectral drops produce unavoidable failure cliffs. This view connects matrix spectra to practical subset selection and gives stronger guarantees for random features, near-identity kernels, and spiked-plus-noise models.",
+    image: "/project-figures/spectral-valleys.svg",
+    imageAlt:
+      "Diagram of structured eigenvalue spectra, stable-rank success valleys, and a sharp failure cliff",
+    paper:
+      "Spectral Valleys and Sharp Failures in Greedy Determinant Maximization",
+    paperHref: "https://proceedings.mlr.press/v336/khanna26a.html",
+    captionPrefix: "COLT 2026",
+  },
 ];
 
 function ExternalMark() {
@@ -107,7 +120,7 @@ export default function Home() {
             <p>
               The group studies fundamental questions about how learning
               algorithms use data, what they retain, and how they interact with
-              people. These four directions organize our current work.
+              people. These five directions organize our current work.
             </p>
           </div>
 
@@ -126,7 +139,9 @@ export default function Home() {
                     height="600"
                   />
                   <figcaption>
-                    Figure from{" "}
+                    {"captionPrefix" in project
+                      ? project.captionPrefix
+                      : "Figure from"}{" "}
                     <a
                       href={project.paperHref}
                       target="_blank"
