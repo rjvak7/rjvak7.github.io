@@ -104,7 +104,7 @@ a:focus-visible {
   flex-direction: column;
   color: var(--ink);
   font-family: var(--serif);
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -191,6 +191,7 @@ a:focus-visible {
 
 .section-nav-inner {
   min-height: 48px;
+  font-size: 13px;
 }
 
 .section-nav a {
