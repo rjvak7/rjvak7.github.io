@@ -3,7 +3,7 @@ const researchProjects = [
     number: "01",
     id: "learning-dynamics",
     title: "Learning dynamics",
-    body: "We study how optimization and loss-surface geometry govern stability, generalization, memorization, and the implicit biases of modern learning algorithms.",
+    body: "We study how optimization algorithms behave near different classes of minima, and how data coherence, batch size, and perturbation scale determine which solutions remain stable. Our current work develops a unified view of SGD and sharpness-aware methods, connecting local loss geometry to generalization, low-complexity representations, and the emergence of simplicity bias.",
     image: "/project-figures/learning-dynamics.webp",
     imageAlt:
       "Plots comparing the optimization dynamics and stability boundaries of SGD, random perturbation, and SAM",
@@ -15,7 +15,7 @@ const researchProjects = [
     number: "02",
     id: "model-memory",
     title: "Model memory",
-    body: "We develop ways to characterize what a model has memorized, understand the privacy consequences, and remove information through principled machine unlearning.",
+    body: "We investigate what it means for a trained model to remember an individual example and how that information appears in representations, loss geometry, and membership-privacy risk. We use these signals to design principled machine-unlearning methods that remove designated data while preserving useful structure learned from the retain set.",
     image: "/project-figures/model-memory.webp",
     imageAlt:
       "UMAP plots comparing retained and forgotten model features after machine unlearning",
@@ -26,7 +26,7 @@ const researchProjects = [
     number: "03",
     id: "data-efficient-learning",
     title: "Data-efficient learning",
-    body: "We design algorithms for selecting, summarizing, and sparsifying data while preserving the statistical and geometric structure needed for learning.",
+    body: "We design coresets, pruning methods, and spectral sparsifiers that make learning possible with substantially less data or computation. Rather than preserving only first-order statistics, our methods aim to retain gradients, curvature, and the shape of the full-data loss landscape, producing compact summaries that remain reliable under noise and distributional complexity.",
     image: "/project-figures/data-efficient-learning.webp",
     imageAlt:
       "Loss landscape plots comparing standard and posterior-smoothed coreset selection",
@@ -38,7 +38,7 @@ const researchProjects = [
     number: "04",
     id: "human-ai-systems",
     title: "Human-AI systems",
-    body: "We investigate how learning systems should align with human judgment, complement it, and adapt when people and models have different strengths.",
+    body: "We study when AI systems should align with human judgment, when they should complement it, and how they can adapt between those roles. This includes learning from subjective annotations, estimating collective perspectives, and building human-centered ensembles that route decisions according to the relative strengths of people and models.",
     image: "/project-figures/human-ai-systems.webp",
     imageAlt:
       "Bar chart comparing human-AI team accuracy across standard, aligned, complementary, and adaptive AI teammates",
@@ -116,19 +116,13 @@ export default function Home() {
               selection, and human-AI collaboration.
             </p>
             <p>
-              Before joining Purdue, I was a visiting researcher at Google
-              Research and a postdoctoral scholar at UC Berkeley. Earlier, I
-              worked on large-scale prediction and recommendation systems at
-              Yahoo! Labs, with additional research experience at LinkedIn,
-              Microsoft Research, and ETH Zürich. I received my PhD in
-              Electrical and Computer Engineering from the University of Texas
-              at Austin and my MTech in Computer Science from IIT Bombay.
-            </p>
-            <p>
-              I have multiple PhD positions available and welcome conversations
-              with Fall 2026 IPAI postdoctoral applicants. Prospective PhD
-              students should apply to Purdue Computer Science and mention my
-              name in their application.
+              Before Purdue, I was a visiting researcher at Google Research and
+              a postdoctoral scholar at UC Berkeley, following research roles at
+              Yahoo! Labs, LinkedIn, Microsoft Research, and ETH Zürich. I
+              received my PhD from the University of Texas at Austin and my
+              MTech from IIT Bombay. I have multiple PhD positions available
+              and welcome conversations with Fall 2026 IPAI postdoctoral
+              applicants.
             </p>
           </div>
 
