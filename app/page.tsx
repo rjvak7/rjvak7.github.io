@@ -78,12 +78,17 @@ export default function Home() {
             </p>
             <p>
               Before Purdue, I was a visiting researcher at Google Research and
-              a postdoctoral scholar at UC Berkeley, following research roles at
-              Yahoo! Labs, LinkedIn, Microsoft Research, and ETH Zürich. I
-              received my PhD from the University of Texas at Austin and my
-              MTech from IIT Bombay. I have multiple PhD positions available
-              and welcome conversations with Fall 2026 IPAI postdoctoral
-              applicants.
+              a postdoctoral scholar at UC Berkeley. I received my PhD from the
+              University of Texas at Austin and my MTech from IIT Bombay. I have
+              multiple PhD positions available.
+            </p>
+            <p className="hero-announcement">
+              Fall 2026 Postdoc positions at{" "}
+              <a href="https://ipai.research.purdue.edu/postdoctoral-fellows-program/">
+                IPAI.
+              </a>{" "}
+              If you are interested in working with me, please send me a note
+              before you apply.
             </p>
           </div>
 

@@ -29,6 +29,9 @@ test("homepage carries the finished research positioning", async () => {
   assert.match(header, /href="\/teaching"/);
   assert.match(header, /portrait/);
   assert.match(page, /multiple PhD positions available/);
+  assert.match(page, /Fall 2026 Postdoc positions at/);
+  assert.match(page, /please send me a note\s+before you apply/);
+  assert.doesNotMatch(page, /Yahoo! Labs|ETH Zürich/);
   assert.doesNotMatch(page, /News and updates|NSF CAREER Award/);
   assert.doesNotMatch(page, /Selected publications|Students and collaborators/);
   assert.doesNotMatch(

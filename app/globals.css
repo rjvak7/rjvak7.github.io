@@ -331,6 +331,16 @@ a:hover .external-mark {
   font-size: 16px;
 }
 
+.hero-copy > p.hero-announcement {
+  margin-top: 18px;
+  color: #800080;
+}
+
+.hero-announcement a {
+  color: inherit;
+  text-decoration-color: currentColor;
+}
+
 .hero-portrait {
   margin: 0;
 }
