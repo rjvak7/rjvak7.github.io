@@ -16,17 +16,7 @@ export default function PublicationsPage() {
         <div className="section-container">
           <div className="section-heading publications-heading">
             <div>
-              <p className="section-label">Publications</p>
-              <h1>Complete publication list</h1>
-            </div>
-            <div className="section-links">
-              <a
-                href="https://dblp.org/pid/31/4624.html"
-                target="_blank"
-                rel="noreferrer"
-              >
-                DBLP ↗
-              </a>
+              <h1>Publications</h1>
             </div>
           </div>
 
