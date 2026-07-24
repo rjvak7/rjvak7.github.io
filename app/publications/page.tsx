@@ -62,10 +62,12 @@ export default function PublicationsPage() {
         </div>
         <nav className="section-nav" aria-label="Primary navigation">
           <div className="section-container section-nav-inner">
+            <Link href="/">Home</Link>
             <Link href="/#research">Current projects</Link>
             <Link aria-current="page" href="/publications">
               Publications
             </Link>
+            <Link href="/teaching">Teaching</Link>
             <Link href="/group">Group</Link>
           </div>
         </nav>

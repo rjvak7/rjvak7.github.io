@@ -215,7 +215,8 @@ a:focus-visible {
 }
 
 .publications-heading h1,
-.group-inner h1 {
+.group-inner h1,
+.teaching h1 {
   margin: 18px 0 0;
   color: inherit;
   font-family: var(--serif);
@@ -223,6 +224,60 @@ a:focus-visible {
   font-weight: 500;
   letter-spacing: -0.035em;
   line-height: 1.08;
+}
+
+.teaching-intro {
+  max-width: 620px;
+  margin: 22px 0 42px;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 17px;
+}
+
+.course-list {
+  border-top: 1px solid var(--line);
+}
+
+.course-row {
+  display: grid;
+  grid-template-columns: 130px 110px minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.course-row time,
+.course-code {
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.course-code {
+  color: var(--ink);
+}
+
+.course-row h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.course-row p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.course-row > a {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .external-mark {
@@ -801,6 +856,14 @@ footer {
   .group-grid {
     grid-template-columns: 1fr;
   }
+
+  .course-row {
+    grid-template-columns: 110px 90px minmax(0, 1fr);
+  }
+
+  .course-row > a {
+    grid-column: 3;
+  }
 }
 
 @media (max-width: 720px) {
@@ -848,6 +911,16 @@ footer {
 
   .member-card {
     grid-template-columns: 110px 1fr;
+  }
+
+  .course-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .course-row > a {
+    grid-column: auto;
+    margin-top: 6px;
   }
 
   .footer-inner {

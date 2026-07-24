@@ -35,8 +35,10 @@ export default function GroupPage() {
         </div>
         <nav className="section-nav" aria-label="Primary navigation">
           <div className="section-container section-nav-inner">
+            <Link href="/">Home</Link>
             <Link href="/#research">Current projects</Link>
             <Link href="/publications">Publications</Link>
+            <Link href="/teaching">Teaching</Link>
             <Link aria-current="page" href="/group">
               Group
             </Link>

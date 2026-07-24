@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const researchProjects = [
   {
     number: "01",
@@ -140,8 +142,12 @@ export default function Home() {
         </div>
         <nav className="section-nav" aria-label="Primary navigation">
           <div className="section-container section-nav-inner">
+            <Link aria-current="page" href="/">
+              Home
+            </Link>
             <a href="#research">Current projects</a>
             <a href="/publications">Publications</a>
+            <a href="/teaching">Teaching</a>
             <a href="/group">Group</a>
           </div>
         </nav>

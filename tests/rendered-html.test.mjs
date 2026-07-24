@@ -8,6 +8,7 @@ const publicationsUrl = new URL(
   import.meta.url,
 );
 const groupUrl = new URL("../app/group/page.tsx", import.meta.url);
+const teachingUrl = new URL("../app/teaching/page.tsx", import.meta.url);
 const layoutUrl = new URL("../app/layout.tsx", import.meta.url);
 
 test("homepage carries the finished research positioning", async () => {
@@ -18,6 +19,7 @@ test("homepage carries the finished research positioning", async () => {
   assert.match(page, /Google Scholar/);
   assert.match(page, /href="\/publications"/);
   assert.match(page, /href="\/group"/);
+  assert.match(page, /href="\/teaching"/);
   assert.match(page, /multiple PhD positions available/);
   assert.doesNotMatch(page, /News and updates|NSF CAREER Award/);
   assert.doesNotMatch(page, /Selected publications|Students and collaborators/);
@@ -29,15 +31,19 @@ test("homepage carries the finished research positioning", async () => {
 });
 
 test("publications and students have dedicated pages", async () => {
-  const [publications, group] = await Promise.all([
+  const [publications, group, teaching] = await Promise.all([
     readFile(publicationsUrl, "utf8"),
     readFile(groupUrl, "utf8"),
+    readFile(teachingUrl, "utf8"),
   ]);
 
   assert.match(publications, /Recent and representative work/);
   assert.match(publications, /Sharpness-Aware Machine Unlearning/);
   assert.match(group, /Students and collaborators/);
   assert.match(group, /student-placeholder-1\.svg/);
+  assert.match(teaching, /Courses at Purdue/);
+  assert.match(teaching, /CS 57300/);
+  assert.match(teaching, /Interpretability in Machine Learning/);
 });
 
 test("starter preview metadata and components are gone", async () => {
