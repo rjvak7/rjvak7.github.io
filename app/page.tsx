@@ -96,7 +96,7 @@ export default function Home() {
           <div className="section-heading">
             <div>
               <p className="section-label">Ongoing research</p>
-              <h2 id="research-title">Current projects</h2>
+              <h2 id="research-title">Recent projects</h2>
             </div>
             <p>
               The group studies fundamental questions about how learning

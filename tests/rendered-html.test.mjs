@@ -19,7 +19,7 @@ test("homepage carries the finished research positioning", async () => {
     readFile(headerUrl, "utf8"),
   ]);
 
-  assert.match(page, /Current projects/);
+  assert.match(page, /Recent projects/);
   assert.match(page, /I work on the foundations of machine learning/);
   assert.match(page, /Machine Unlearning/);
   assert.match(page, /learning-dynamics-loss-landscape\.png/);

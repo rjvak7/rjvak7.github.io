@@ -88,7 +88,7 @@ export default function SiteHeader({
           <Link aria-current={current === "home" ? "page" : undefined} href="/">
             Home
           </Link>
-          <Link href="/#research">Current projects</Link>
+          <Link href="/#research">Recent projects</Link>
           <Link
             aria-current={current === "publications" ? "page" : undefined}
             href="/publications"
