@@ -6,9 +6,9 @@ const researchProjects = [
     id: "learning-dynamics",
     title: "Learning dynamics",
     body: "We study how optimization algorithms behave near different classes of minima, and how data coherence, batch size, and perturbation scale determine which solutions remain stable. Our current work develops a unified view of SGD and sharpness-aware methods, connecting local loss geometry to generalization, low-complexity representations, and the emergence of simplicity bias.",
-    image: "/project-figures/learning-dynamics.webp",
+    image: "/project-figures/learning-dynamics-loss-landscape.png",
     imageAlt:
-      "Plots comparing the optimization dynamics and stability boundaries of SGD, random perturbation, and SAM",
+      "Three-dimensional views of a complex loss landscape and a zoomed-in local minimum",
     paper:
       "A Unified Stability Analysis of SAM vs SGD: Role of Data Coherence and Emergence of Simplicity Bias",
     paperHref: "https://arxiv.org/abs/2511.17378",
