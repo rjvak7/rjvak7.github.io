@@ -38,7 +38,7 @@ const graduatedStudents = [
     details: "Jointly advised with Petros Drineas",
     placement: "First job: Research Scientist at LinkedIn",
     image: "/group/gregory-dexter.png",
-    website: null,
+    website: "https://www.gregorydexter.com/",
   },
 ];
 
