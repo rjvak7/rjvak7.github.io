@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
+import GoogleAnalytics from "./google-analytics";
 import "./globals.css";
 
 const title = "Rajiv Khanna | Machine Learning Research at Purdue";
@@ -52,7 +53,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <GoogleAnalytics />
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NR6LK4S"
+            height="0"
+            width="0"
+            className="analytics-frame"
+            title="Google Tag Manager"
+          />
+        </noscript>
+        {children}
+      </body>
     </html>
   );
 }

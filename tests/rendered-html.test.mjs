@@ -10,6 +10,7 @@ const publicationsUrl = new URL(
 const groupUrl = new URL("../app/group/page.tsx", import.meta.url);
 const teachingUrl = new URL("../app/teaching/page.tsx", import.meta.url);
 const headerUrl = new URL("../app/site-header.tsx", import.meta.url);
+const analyticsUrl = new URL("../app/google-analytics.tsx", import.meta.url);
 const layoutUrl = new URL("../app/layout.tsx", import.meta.url);
 
 test("homepage carries the finished research positioning", async () => {
@@ -52,12 +53,15 @@ test("publications and students have dedicated pages", async () => {
 });
 
 test("starter preview metadata and components are gone", async () => {
-  const [page, layout] = await Promise.all([
+  const [page, layout, analytics] = await Promise.all([
     readFile(pageUrl, "utf8"),
     readFile(layoutUrl, "utf8"),
+    readFile(analyticsUrl, "utf8"),
   ]);
 
   assert.doesNotMatch(page, /SkeletonPreview|codex-preview/);
   assert.doesNotMatch(layout, /Starter Project|codex-preview/);
   assert.match(layout, /Rajiv Khanna/);
+  assert.match(analytics, /GTM-NR6LK4S/);
+  assert.match(analytics, /UA-44188253-2/);
 });
