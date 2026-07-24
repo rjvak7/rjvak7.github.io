@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { publications } from "./data";
+import SiteHeader from "../site-header";
 
 export const metadata: Metadata = {
   title: "Publications | Rajiv Khanna",
@@ -10,25 +10,7 @@ export const metadata: Metadata = {
 export default function PublicationsPage() {
   return (
     <>
-      <header className="subpage-header" id="top">
-        <div className="section-container subpage-masthead">
-          <Link className="wordmark" href="/">
-            Rajiv Khanna
-          </Link>
-          <Link href="/">Home</Link>
-        </div>
-        <nav className="section-nav" aria-label="Primary navigation">
-          <div className="section-container section-nav-inner">
-            <Link href="/">Home</Link>
-            <Link href="/#research">Current projects</Link>
-            <Link aria-current="page" href="/publications">
-              Publications
-            </Link>
-            <Link href="/teaching">Teaching</Link>
-            <Link href="/group">Group</Link>
-          </div>
-        </nav>
-      </header>
+      <SiteHeader current="publications" />
 
       <main className="publications section-block subpage-main">
         <div className="section-container">

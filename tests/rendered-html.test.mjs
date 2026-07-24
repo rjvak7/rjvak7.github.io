@@ -9,17 +9,22 @@ const publicationsUrl = new URL(
 );
 const groupUrl = new URL("../app/group/page.tsx", import.meta.url);
 const teachingUrl = new URL("../app/teaching/page.tsx", import.meta.url);
+const headerUrl = new URL("../app/site-header.tsx", import.meta.url);
 const layoutUrl = new URL("../app/layout.tsx", import.meta.url);
 
 test("homepage carries the finished research positioning", async () => {
-  const page = await readFile(pageUrl, "utf8");
+  const [page, header] = await Promise.all([
+    readFile(pageUrl, "utf8"),
+    readFile(headerUrl, "utf8"),
+  ]);
 
   assert.match(page, /Current projects/);
   assert.match(page, /I work on the foundations of machine learning/);
-  assert.match(page, /Google Scholar/);
-  assert.match(page, /href="\/publications"/);
-  assert.match(page, /href="\/group"/);
-  assert.match(page, /href="\/teaching"/);
+  assert.match(header, /Google Scholar/);
+  assert.match(header, /href="\/publications"/);
+  assert.match(header, /href="\/group"/);
+  assert.match(header, /href="\/teaching"/);
+  assert.match(header, /portrait/);
   assert.match(page, /multiple PhD positions available/);
   assert.doesNotMatch(page, /News and updates|NSF CAREER Award/);
   assert.doesNotMatch(page, /Selected publications|Students and collaborators/);
