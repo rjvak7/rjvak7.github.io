@@ -71,9 +71,10 @@ export default function Home() {
         <section className="hero section-container" id="top">
           <div className="hero-copy">
             <p className="hero-summary">
-              I work on the foundations of machine learning, with particular
-              interests in optimization, stability, model memory, data
-              selection, and human-AI collaboration.
+              My research seeks to identify the structure underlying learning:
+              how it emerges in optimization dynamics, what models remember,
+              which data matters, and how people and AI can learn to work
+              together.
             </p>
             <p>
               Before Purdue, I was a visiting researcher at Google Research and

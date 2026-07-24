@@ -20,7 +20,7 @@ test("homepage carries the finished research positioning", async () => {
   ]);
 
   assert.match(page, /Recent projects/);
-  assert.match(page, /I work on the foundations of machine learning/);
+  assert.match(page, /identify the structure underlying learning/);
   assert.match(page, /Machine Unlearning/);
   assert.match(page, /learning-dynamics-loss-landscape\.png/);
   assert.match(header, /Google Scholar/);
