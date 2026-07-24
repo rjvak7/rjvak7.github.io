@@ -55,7 +55,10 @@ test("publications and students have dedicated pages", async () => {
   ]);
 
   assert.match(publications, /<h1>Publications<\/h1>/);
-  assert.doesNotMatch(publications, /DBLP|section-label/);
+  assert.doesNotMatch(
+    publications,
+    /DBLP|section-label|Complete publication list/,
+  );
   assert.match(publications, /import \{ publications \} from "\.\/data"/);
   assert.match(group, /Students and collaborators/);
   assert.match(group, /Young In Kim/);

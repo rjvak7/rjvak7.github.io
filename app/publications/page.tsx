@@ -4,7 +4,7 @@ import SiteHeader from "../site-header";
 
 export const metadata: Metadata = {
   title: "Publications | Rajiv Khanna",
-  description: "Complete publication list for Rajiv Khanna.",
+  description: "Publications by Rajiv Khanna.",
 };
 
 export default function PublicationsPage() {
