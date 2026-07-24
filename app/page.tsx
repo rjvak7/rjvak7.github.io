@@ -16,7 +16,7 @@ const researchProjects = [
   {
     number: "02",
     id: "model-memory",
-    title: "Model memory",
+    title: "Machine Unlearning",
     body: "We investigate what it means for a trained model to remember an individual example and how that information appears in representations, loss geometry, and membership-privacy risk. We use these signals to design principled machine-unlearning methods that remove designated data while preserving useful structure learned from the retain set.",
     image: "/project-figures/model-memory.webp",
     imageAlt:
