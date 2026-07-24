@@ -56,6 +56,38 @@ function ExternalMark() {
   );
 }
 
+function ProfileGlyph({
+  type,
+}: {
+  type: "scholar" | "dblp" | "email";
+}) {
+  if (type === "scholar") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 24 24">
+        <path d="m2 9 10-5 10 5-10 5L2 9Z" />
+        <path d="M6 11.5V16c2.8 2.6 9.2 2.6 12 0v-4.5" />
+      </svg>
+    );
+  }
+
+  if (type === "dblp") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 24 24">
+        <path d="M5 4h10v16H5z" />
+        <path d="M9 7h10v13H9" />
+        <path d="M8 8h4M8 11h4M8 14h4" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="1" />
+      <path d="m4 7 8 6 8-6" />
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -74,18 +106,26 @@ export default function Home() {
                 href="https://scholar.google.com/citations?user=523w4w8AAAAJ&hl=en"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Google Scholar"
+                title="Google Scholar"
               >
-                Google Scholar <ExternalMark />
+                <ProfileGlyph type="scholar" />
               </a>
               <a
                 href="https://dblp.org/pid/31/4624.html"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="DBLP"
+                title="DBLP"
               >
-                DBLP <ExternalMark />
+                <ProfileGlyph type="dblp" />
               </a>
-              <a href="mailto:rajivak@purdue.edu">
-                rajivak@purdue.edu <ExternalMark />
+              <a
+                href="mailto:rajivak@purdue.edu"
+                aria-label="Email Rajiv Khanna"
+                title="rajivak@purdue.edu"
+              >
+                <ProfileGlyph type="email" />
               </a>
             </div>
           </div>
