@@ -18,8 +18,7 @@ export const publications = [
   {
     "year": "2026",
     "venue": "Journal of Chemical Information and Modeling",
-    "title": "MolSelector: A Machine Learning Framework for Interpretable Subset Selection from Molecular Science Data Sets
-",
+    "title": "MolSelector: A Machine Learning Framework for Interpretable Subset Selection from Molecular Science Data Sets",
     "authors": "Caitlin Whitter, Aurora Evelyn Clark, Alex Pothen, Rajiv Khanna",
     "href": null
   },

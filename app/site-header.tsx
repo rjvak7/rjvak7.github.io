@@ -46,6 +46,7 @@ export default function SiteHeader({
           <Link className="wordmark" href="/" aria-label="Rajiv Khanna, home">
             Rajiv Khanna
           </Link>
+          <p className="header-role">Assistant Professor, Dept of CS</p>
           <div className="header-profiles" aria-label="Research profiles">
             <a
               href="https://scholar.google.com/citations?user=523w4w8AAAAJ&hl=en"
@@ -71,6 +72,15 @@ export default function SiteHeader({
               title="rajivak@purdue.edu"
             >
               <ProfileGlyph type="email" />
+            </a>
+            <a
+              href="/FullCV.pdf"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Rajiv Khanna’s CV"
+              title="Curriculum vitae"
+            >
+              CV
             </a>
           </div>
         </div>

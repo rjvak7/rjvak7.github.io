@@ -90,8 +90,10 @@ export default function Home() {
               and AI can learn to work together.
             </p>
             <p>
-              Before Purdue, I was a visiting researcher at Google Research and
-              a postdoctoral scholar at UC Berkeley. I received my PhD from the
+              Before Purdue, I was a visiting researcher at Google Research,
+              a Research Fellow at Simons Institute for the Theory of Computing,
+              and a postdoctoral scholar at Deptt of Statistics at UC Berkeley.
+              I received my PhD from the
               University of Texas at Austin and my MTech from IIT Bombay. I have
               multiple PhD positions available.
             </p>
@@ -105,6 +107,35 @@ export default function Home() {
             </p>
           </div>
 
+        </section>
+
+        <section
+          className="honors section-container"
+          id="honors"
+          aria-labelledby="honors-title"
+        >
+          <h2 id="honors-title">Honors</h2>
+          <ul className="honors-list">
+            <li>
+              <time dateTime="2026">2026</time>
+              <span><em>NSF CAREER Award</em></span>
+            </li>
+            <li>
+              <time dateTime="2023">2023</time>
+              <span><em>AnalytiXin Fellowship</em></span>
+            </li>
+            <li>
+              <time dateTime="2020">2020</time>
+              <span><em>Best Paper Award</em>, NeurIPS</span>
+            </li>
+            <li>
+              <time dateTime="2018">2018</time>
+              <span>
+                <em>Research Fellowship</em>, Simons Institute for the Theory of
+                Computing, UC Berkeley
+              </span>
+            </li>
+          </ul>
         </section>
 
         <section
