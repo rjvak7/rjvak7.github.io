@@ -1,22 +1,47 @@
 // Generated from origin/master:pubs.html. Edit that source or this array when adding publications.
 export const publications = [
+   {
+    "year": "2026",
+    "venue": "Neurips 2026",
+    "title": "Contrastive Representation Shaping for LLM Unlearning",
+    "authors": "Haoran Tang, Rajiv Khanna",
+    "href": null
+  },
+
   {
     "year": "2026",
-    "venue": "Wiley StatsRef: Statistics Reference 2026",
+    "venue": "Neurips 2026",
+    "title": "Tail Wags the Model: Generalization and Membership Privacy Trade-offs of Sharpness-Aware Minimization",
+    "authors": "Young In Kim, Rajiv Khanna",
+    "href": null
+  },
+  {
+    "year": "2026",
+    "venue": "Journal of Chemical Information and Modeling",
+    "title": "MolSelector: A Machine Learning Framework for Interpretable Subset Selection from Molecular Science Data Sets
+",
+    "authors": "Caitlin Whitter, Aurora Evelyn Clark, Alex Pothen, Rajiv Khanna",
+    "href": null
+  },
+  
+  
+  {
+    "year": "2026",
+    "venue": "Wiley StatsRef: Statistics Reference 2026 (Invited Article)",
     "title": "Bayesian Coresets",
     "authors": "Rajiv Khanna",
     "href": null
   },
   {
     "year": "2026",
-    "venue": "ICML 2026 Workshop (Demo)",
+    "venue": "ICML 2026 Workshop (DEMO)",
     "title": "Curvature-Aware Active Statistical Inference : Reducing Labeling via Data Coherence",
     "authors": "Pinaki Mohanty, Rajiv Khanna",
     "href": null
   },
   {
     "year": "2026",
-    "venue": "ICML 2026 Workshop (Demo)",
+    "venue": "ICML 2026 Workshop (DEMO)",
     "title": "Adaptive Stratified Active Statistical Inference",
     "authors": "Pinaki Mohanty, Rajiv Khanna",
     "href": null
