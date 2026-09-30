@@ -138,7 +138,7 @@ export const publications = [
   },
   {
     "year": "2023",
-    "venue": "ICML 2023",
+    "venue": "ICML Workshop 2023",
     "title": "On Memorization and Privacy risks of Sharpness Aware Minimization",
     "authors": "Young In Kim, Pratiksha Agrawal, Johannes O Royset, Rajiv Khanna",
     "href": null
